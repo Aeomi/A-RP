@@ -1,54 +1,68 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>A-RP by Aeomi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    
-    <script src="http://puu.sh/i1QVH/1db22af700.js"></script>
-    <script>
-        snowStorm.snowColor = '#99ccff';
-        snowStorm.flakesMaxActive = 16;
-        snowStorm.useTwinkleEffect = true;
-        snowStorm.flakeBottom = 334;
-    </script>
-    
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">A-RP</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/Aeomi/A-RP" class="btn">GitHub</a>
-      <a href="https://github.com/Aeomi/A-RP/wiki/Index" class="btn">Wiki</a>
-      <a href="https://github.com/Aeomi/A-RP/zipball/master" class="btn">Download .zip</a>
-      <!--<a href="https://github.com/Aeomi/A-RP/tarball/master" class="btn">Download .tar.gz</a>--> 
-    </section>
+	<head>
+		<meta charset="UTF-8">
+		<title>A-RP by Aeomi</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
-    <section class="main-content">
-      <h2>
-<a id="welcome-to-a-rp" class="anchor" href="#welcome-to-a-rp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to A-RP</h2>
+		<!-- Falling Snow -->
+		<script src="http://puu.sh/i1QVH/1db22af700.js"></script>
+		<script>
+			snowStorm.snowColor = '#99ccff';
+			snowStorm.flakesMaxActive = 16;
+			snowStorm.useTwinkleEffect = true;
+			snowStorm.flakeBottom = 334;
+		</script>
 
-<p>A-RP is an RPG-styled modular vision currently in its pre-development infancy.</p>
+		<!-- Initialise BGM with low volume -->
+		<script>
+			document.onload = function() {
+				var backgroundMusic = document.getElementById("myAudio");
+				backgroundMusic.volume = 0.25;
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+		<section class="page-header">
+			<h1 class="project-name">A-RP</h1>
+			<h2 class="project-tagline"></h2>
+			<a href="https://github.com/Aeomi/A-RP" class="btn">GitHub</a>
+			<a href="https://github.com/Aeomi/A-RP/wiki/Index" class="btn">Wiki</a>
+			<a href="https://github.com/Aeomi/A-RP/zipball/master" class="btn">Download .zip</a>
+			<!--<a href="https://github.com/Aeomi/A-RP/tarball/master" class="btn">Download .tar.gz</a>--> 
+		</section>
 
-<blockquote>
-<p>A-RP will first launch as a gamemode for Garry's Mod, and eventually an independant game available for Windows, Linux &amp; Mac OSX.</p>
-</blockquote>
+		<section class="main-content">
+			<h2><a id="welcome-to-a-rp" class="anchor" href="#welcome-to-a-rp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to A-RP</h2>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/Aeomi/A-RP">A-RP</a> is maintained by <a href="https://github.com/Aeomi">Aeomi</a>.</span>
-        <audio controls autoplay>
-          <source src="http://puu.sh/i1PBC/8503272cc7.ogg" type="audio/ogg">
-          Your browser does not support the audio element.
-        </audio>
-      </footer>
+			<p>A-RP is an RPG-styled modular vision currently in its pre-development infancy.</p>
 
-    </section>
+			<blockquote>
+				<p>A-RP will first launch as a gamemode for Garry's Mod, and eventually an independant game available for Windows, Linux &amp; Mac OSX.</p>
+			</blockquote>
 
-  
-  </body>
+			<footer class="site-footer">
+				<span class="site-footer-owner"><a href="https://github.com/Aeomi/A-RP">A-RP</a> is maintained by <a href="https://github.com/Aeomi">Aeomi</a>.</span>
+				
+				<!-- Background music -->
+				<audio id="bgm" controls autoplay>
+					<source src="http://puu.sh/i1PBC/8503272cc7.ogg" type="audio/ogg">
+					Your browser does not support the audio element.
+				</audio>
+			</footer>
+
+		</section>
+
+	</body>
+	
+	
+	
 </html>
 
