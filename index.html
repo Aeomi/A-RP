@@ -3,33 +3,25 @@
 <html lang="en-us">
 	<head>
 		<meta charset="UTF-8">
-		<title>A-RP by Aeomi</title>
+		<title>A-RP</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 		<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
+		<!-- Load JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		
 		<!-- Falling Snow -->
-		<script src="http://puu.sh/i1QVH/1db22af700.js"></script>
-		<script>
-			snowStorm.snowColor = '#99ccff';
-			snowStorm.flakesMaxActive = 16;
-			snowStorm.useTwinkleEffect = true;
-			snowStorm.flakeBottom = 334;
-		</script>
+		<script src="scripts/snowstorm.js"></script>
 
-		<!-- Initialise BGM with low volume -->
-		<script>
-			document.onload = function() {
-				var backgroundMusic = document.getElementById("myAudio");
-				backgroundMusic.volume = 0.25;
-			}
-		</script>
+
 		
 	</head>
 	
 	<body>
+		<!-- Page Header -->
 		<section class="page-header">
 			<h1 class="project-name">A-RP</h1>
 			<h2 class="project-tagline"></h2>
@@ -39,6 +31,7 @@
 			<!--<a href="https://github.com/Aeomi/A-RP/tarball/master" class="btn">Download .tar.gz</a>--> 
 		</section>
 
+		<!-- Page Content -->
 		<section class="main-content">
 			<h2><a id="welcome-to-a-rp" class="anchor" href="#welcome-to-a-rp" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to A-RP</h2>
 
@@ -52,10 +45,16 @@
 				<span class="site-footer-owner"><a href="https://github.com/Aeomi/A-RP">A-RP</a> is maintained by <a href="https://github.com/Aeomi">Aeomi</a>.</span>
 				
 				<!-- Background music -->
-				<audio id="bgm" controls autoplay>
-					<source src="http://puu.sh/i1PBC/8503272cc7.ogg" type="audio/ogg">
+				<audio id="backgroundMusic" controls autoplay loop>
+					<source src="data/audio/bgm.ogg" type="audio/ogg">
 					Your browser does not support the audio element.
 				</audio>
+				
+				<!-- Initialise BGM with low volume -->
+				<script>
+					document.getElementById("backgroundMusic").volume = 0.1;
+				</script>
+				
 			</footer>
 
 		</section>
@@ -65,4 +64,26 @@
 	
 	
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
