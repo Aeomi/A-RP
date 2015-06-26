@@ -1,4 +1,4 @@
-include("../classes/character.lua")
+include("../../classes/character.lua")
 
 -- Character Managment
 ARP.char = ARP.char or {}
