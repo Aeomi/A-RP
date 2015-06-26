@@ -13,7 +13,7 @@ function GM:PlayerInitialSpawn(pl)
 	if pl:IsBot() then pl:Kick(); return end
 	
 	-- Set Player to User (Team)
-	pl:SetTeam(1)
+	pl:SetTeam(TEAM_DEFAULT)
 	pl:ChatPrint("Welcome "..pl:Nick().." this is your initial spawn for this session")
 	
 	
@@ -23,11 +23,12 @@ function GM:PlayerInitialSpawn(pl)
 	
 	-- Create or load player
 	if ARP.char.exists(uId) then
-		pl.char = ARP.char.load(uId) 	-- Load
+		pl.char = ARP.char.load(uId) 	-- Load Chcaracter from uID
 	else
 		pl.char = ARP.char.create(uId) 	-- Create
 		pl.char:saveData()				-- Save
 	end
+	
 	
 	
 end
