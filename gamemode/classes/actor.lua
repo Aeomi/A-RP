@@ -4,7 +4,7 @@
 	-- 	Desc: An abstract class used as the base to its various sub-classes.
 --]]
 
-include "../arp/sv_arp_db.lua"	-- Load A-RP!Database
+include "../arp/server/sv_arp_db.lua"	-- Load A-RP!Database
 include "stats.lua"
 
 

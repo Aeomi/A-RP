@@ -30,7 +30,7 @@ Stats.DEFAULT_STATS = {
 // Array of 5 numbers can be used to make a stat object, or default is used
 function Stats:new(stats)	-- No check to see if stats is an array of 5 numbers
 	local obj = stats or Stats.DEFAULT_STATS
-	setmetatable(obj, self)
+	setmetatable(obj, Stats)
 	return obj
 end
 

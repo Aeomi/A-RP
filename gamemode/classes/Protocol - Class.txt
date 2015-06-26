@@ -1,0 +1,2 @@
+1. A class (instantiable or abstract) should be the metatable of its instances.
+2. A class must only perform actions as it prescribes; do not overextend a class.
