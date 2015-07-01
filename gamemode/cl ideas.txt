@@ -1,1 +1,0 @@
-Make a menu class that has windows, panels, and text fields (etc) for ease of use

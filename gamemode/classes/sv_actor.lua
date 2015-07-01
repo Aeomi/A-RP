@@ -4,8 +4,8 @@
 	-- 	Desc: An abstract class used as the base to its various sub-classes.
 --]]
 
-include "../arp/server/sv_arp_db.lua"	-- Load A-RP!Database
-include "stats.lua"
+include("a-rp/gamemode/arp/server/sv_arp_db.lua")	-- Load A-RP!Database
+include("a-rp/gamemode/classes/sv_stats.lua")
 
 
 Actor = {} or Actor		-- Actor is abstract and thus should not be used to create object
@@ -44,18 +44,3 @@ end
 
 function Actor:hurt()		-- Incoming damage calculations
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

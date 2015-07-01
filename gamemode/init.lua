@@ -1,9 +1,10 @@
-AddCSLuaFile("shared.lua")
-AddCSLuaFile("cl_init.lua")
+AddCSLuaFile("a-rp/gamemode/shared.lua")
+AddCSLuaFile("a-rp/gamemode/cl_init.lua")
 
-include("shared.lua")
+include("a-rp/gamemode/shared.lua")
 
-include("player.lua")		-- Manage player
+include("a-rp/gamemode/player.lua")		-- Manage player
+
 
 function GM:Initialize()
 
@@ -17,10 +18,4 @@ function GM:Initialize()
 	end
 	ARP.log.sv("Database Loaded\n")
 
-	
-	
 end
-
-
-
-

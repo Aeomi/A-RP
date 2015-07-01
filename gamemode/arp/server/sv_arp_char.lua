@@ -1,4 +1,4 @@
-include("../../classes/character.lua")
+include("a-rp/gamemode/classes/sv_character.lua")
 
 -- Character Managment
 ARP.char = ARP.char or {}
@@ -12,7 +12,7 @@ end
 ARP.char.create = function(uId)
 	local name = nil	-- Trigger clientside to show derma character maker
 	-- hook.Run("arp/char/creation_menu")
-	
+
 	local char = Character:new(uId, name)
 	return char
 end
@@ -21,7 +21,7 @@ end
 ARP.char.load = function(uId)
 	local path = "database\\actors\\"..tostring(uId)..".txt"
 	local data = ARP.db.get(path)
-	
+
 	local char = Character:new(uid, data.name, data.stats)
 	return char
 end

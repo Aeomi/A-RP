@@ -1,0 +1,6 @@
+Use DermaMenu as the in-game
+
+local menu = DermaMenu()
+menu:AddOption( "Die", function() RunConsoleCommand( "kill" ) end )
+menu:AddOption( "Close", function() print( "Close pressed" ) end ) -- The menu will remove itself, we don't have to do anything.
+menu:Open()
