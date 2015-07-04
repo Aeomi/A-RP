@@ -1,5 +1,7 @@
 include("a-rp/gamemode/classes/cl_menu_frame.lua")
 include("a-rp/gamemode/classes/cl_menu_button.lua")
+include("a-rp/gamemode/classes/cl_menu_label.lua")
+include("a-rp/gamemode/classes/cl_menu_textField.lua")
 include("a-rp/gamemode/arp/sh_arp_log.lua")
 
 ARP.menu = ARP.menu or {
@@ -21,7 +23,7 @@ ARP.menu.createFrame = function(insId, title, x, y, width, height, parent)
     frame.id = insId
     frame:setTitle(title)
     if (parent) then frame:setParent(parent) end
-    frame:shown(true)
+    frame.elm:MakePopup()
 
     ARP.menu.instances[insId] = frame
     return frame
@@ -40,6 +42,35 @@ ARP.menu.createButton = function(insId, text, x, y, width, height, parent)
     return button
 end
 
+ARP.menu.createLabel = function(insId, text, x, y, width, height, parent)
+    if (ARP.menu.instances[insId] != nil) then ARP.menu.instances[insId]:destroy() end
+
+    local label = Label.create(x, y, width, height, text)
+    label.id = insId
+    if (parent) then label:setParent(parent) end
+
+    return label
+end
+
+ARP.menu.createTextField = function(insId, x, y, width, height, parent)
+    if (ARP.menu.instances[insId] != nil) then ARP.menu.instances[insId]:destroy() end
+
+    local textField = TextField.create(x, y, width, height)
+    textField.id = insId
+    if (parent) then textField:setParent(parent) end
+    textField:editable(true)
+
+    return textField
+end
+
+
+
+
+
+
+
+
+-- -- --  -- --
 ARP.menu.getInstance = function(insId)
     local ins = ARP.menu.instances
 

@@ -24,6 +24,10 @@ function Element:setPos(x, y)
 	self.elm:SetPos(x, y)
 end
 
+function Element:setSize(w, h)
+	self.elm:SetSize(w, h)
+end
+
 function Element:setParent(parent)
 	self.elm:SetParent(parent.elm)
 end
@@ -32,7 +36,6 @@ function Element:shown(bool)
 	if bool and self.elm:IsVisible() then return end
 	if bool and !self.elm:IsVisible() then
 		self.elm:SetVisible(bool)
-		self.elm:MakePopup()	-- This brings the frame to the front; remove if undesired
 	end
 end
 
