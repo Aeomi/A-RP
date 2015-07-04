@@ -1,4 +1,5 @@
-include("a-rp/gamemode/classes/cl_frame.lua")
+include("a-rp/gamemode/classes/cl_menu_frame.lua")
+include("a-rp/gamemode/classes/cl_menu_button.lua")
 include("a-rp/gamemode/arp/sh_arp_log.lua")
 
 ARP.menu = ARP.menu or {
@@ -19,17 +20,24 @@ ARP.menu.createFrame = function(insId, title, x, y, width, height, parent)
     local frame = Frame.create(x, y, width, height)
     frame.id = insId
     frame:setTitle(title)
-    frame:setParent(parent)
+    if (parent) then frame:setParent(parent) end
     frame:shown(true)
+
     ARP.menu.instances[insId] = frame
     return frame
 end
 
 
-ARP.menu.createButton = function(insId, text, x, y, width, height, parent, action)
-    local button = button.create()
-    --do stuff to set button up
+ARP.menu.createButton = function(insId, text, x, y, width, height, parent)
+    if (ARP.menu.instances[insId] != nil) then ARP.menu.instances[insId]:destroy() end
+
+    local button = Button.create(x, y, width, height)
+    button.id = insId
+    if (parent) then button:setParent(parent) end   -- CHANGE THIS TO INS ID
+    button:setText(text)
+
     ARP.menu.instances[insId] = button
+    return button
 end
 
 ARP.menu.getInstance = function(insId)
@@ -50,14 +58,12 @@ end
 
 -- Blurry background (goes in .Paint!)
 ARP.menu.blurMat = Material("pp/blurscreen")
-
 function ARP.menu.drawBackgroundBlur(panel, startTime)
     local fade = 0
 
     if ( startTime ) then
         local timeFromStart = (SysTime() - startTime) / .2
     	fade = math.Clamp(timeFromStart, 0, 1)
-        print(timeFromStart)
     end
 
     -- --
